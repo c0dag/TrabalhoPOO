@@ -4,6 +4,7 @@
 - Siga as instruções abaixo e implemente todas as funcionalidades requisitadas. Utilize conceitos de instanciação, classes, ArrayLists, herança, sobrecarga, sobrescrita, agregação, associação, composição e Interfaces (abstração). A identicação das classes e seus relacionamentos faz parte do processo de interpretação do problema. Será avaliado o uso de todos esses conhecimentos. Utilize a IDE de sua preferência.
 - Dicas: Lembre-se que as ações são implementadas através de métodos. Preste bastante atenção no tipo derelacionamento que existe entre os objetos. Utilize herança quando necessário e verique se existem possibilidades de implementar sobrecarga.
 
+---
 
 ## Requisitos
 1. Seu sistema deve permitir que um Cliente realize vários Pedidos. Para isso ele precisa:
