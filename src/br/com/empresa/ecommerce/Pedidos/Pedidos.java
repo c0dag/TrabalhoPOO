@@ -21,5 +21,9 @@ public class Pedidos {
         valorTotal += produto.getPreco() * quantidade;
     }
 
+    public Cliente getCliente(){
+        return cliente;
+    }
+
 
 }
