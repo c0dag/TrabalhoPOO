@@ -6,6 +6,7 @@ import br.com.empresa.ecommerce.Cliente.ClientePJ;
 import br.com.empresa.ecommerce.Cliente.CriarConta;
 import br.com.empresa.ecommerce.Produto.Produto;
 import br.com.empresa.ecommerce.Pedidos.Pedidos;
+import br.com.empresa.ecommerce.Interfaces.*;
 
 public class Main {
     public static void main(String[] args) throws Exception {
@@ -43,5 +44,22 @@ public class Main {
         System.out.println("Cliente do pedido: " + pedido1.getCliente().getNome());
 
         System.out.println("Estoque restante: " + produto1.getEstoque());
+
+        
+        pedido1.setFormaPagamento(new Pix()); 
+        pedido1.setTipoEntrega(new EntregaRapida());
+
+        double valorComDesconto = pedido1.getFormaPagamento().calcularValorFinal(pedido1.getValorTotal());
+        double frete = pedido1.getTipoEntrega().calcularFrete();
+        double total = valorComDesconto + frete;
+
+        System.out.println("Forma de pagamento: " + pedido1.getFormaPagamento().tipoPagamento());
+        if (pedido1.getFormaPagamento() instanceof Pix) {
+        System.out.println("Desconto (15% PIX): R$ " + (pedido1.getValorTotal() - valorComDesconto));
+        }
+        System.out.println("Entrega: " + pedido1.getTipoEntrega().tipoEntrega());
+        System.out.println("Frete: R$ " + frete);
+        System.out.println("TOTAL A PAGAR: R$ " + total); 
+
     }
 }

@@ -1,5 +1,6 @@
 package br.com.empresa.ecommerce.Interfaces;
 
-public class FormaPagamento {
-    
+public interface FormaPagamento {
+    String tipoPagamento();
+    double calcularValorFinal(double valor);
 }
